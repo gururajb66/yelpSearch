@@ -1,9 +1,9 @@
 {
   "requires": true,
   "lockfileVersion": 1,
-  "script":"node index.js",
+  "script":{"start":"node index.js"},
   "dependencies": {
-  "express":"0.1",
+   "express":"latest",
     "oauth": {
       "version": "0.9.15",
       "resolved": "https://registry.npmjs.org/oauth/-/oauth-0.9.15.tgz",
