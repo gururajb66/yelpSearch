@@ -19,4 +19,7 @@ res.send(response.jsonBody.businesses[0].name);
 });
 })
  
-app.listen(3000);
+const server = app.listen(process.env.PORT||"8080",function(){
+	const port = server.address().port;
+	console.log("Emp App is listening on "+port);
+	});
