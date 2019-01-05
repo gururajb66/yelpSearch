@@ -11,8 +11,12 @@ client.search({
   term:req.param('term'),
   location: req.param('location')
 }).then(response => {
-  //console.log(response.jsonBody.businesses[0].name);
-res.send(response.jsonBody.businesses[0].name);
+var result='';
+response.jsonBody.businesses.forEach(function(element) {
+result=result+'\n'+element.name;
+});
+console.log(result);	
+res.send(result);
 }).catch(e => {
   console.log(e);
   res.send(e);
